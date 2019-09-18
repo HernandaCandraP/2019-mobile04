@@ -11,6 +11,7 @@ import id.ac.polinema.intent.model.user;
 
 public class ParcelableActivity extends AppCompatActivity {
 
+    public static final String USER_AKU = "profile";
     user use;
     EditText usernameInput, nameInput, ageInput;
 
@@ -31,7 +32,7 @@ public class ParcelableActivity extends AppCompatActivity {
         use = new user(username, name, age);
 
         Intent intent = new Intent(this, ProfileParcelableActivity.class);
-        intent.putExtra("parcel", use);
+        intent.putExtra(USER_AKU, use);
         startActivity(intent);
     }
 }

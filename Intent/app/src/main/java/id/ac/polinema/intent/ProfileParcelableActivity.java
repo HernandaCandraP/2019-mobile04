@@ -7,6 +7,8 @@ import android.widget.TextView;
 
 import id.ac.polinema.intent.model.user;
 
+import static id.ac.polinema.intent.ParcelableActivity.USER_AKU;
+
 public class ProfileParcelableActivity extends AppCompatActivity {
 
     private TextView usernameText, nameText, ageText;
@@ -25,7 +27,7 @@ public class ProfileParcelableActivity extends AppCompatActivity {
         if (extras != null) {
 
             // TODO: display value here
-            user use = getIntent().getParcelableExtra("parcel");
+            user use = extras.getParcelable(USER_AKU);
 
             String username = use.getUsername();
             String name = use.getName();
